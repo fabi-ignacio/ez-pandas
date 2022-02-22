@@ -24,7 +24,7 @@ def dfGroup(dfSource,by=None,columnsList=None,groupbyColumns=None,floatFormatter
                     if t in groupbyColumns:
                         pass
                     else:
-                        dataFrame = dataFrame.rename({t:f'{t}_mean '},axis=1)
+                        dataFrame = dataFrame.rename({t:f'{t}_{by} '},axis=1)
             for i in (dataFrame.columns):
                 if dataFrame[i].dtypes == 'float64':
                     dataFrame.loc[:, i] = dataFrame[i].map(floatFormatter.format)
