@@ -1,1 +1,1 @@
-from ez_groups import ezGroups
+from ez_groups import dfGroup
