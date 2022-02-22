@@ -1,3 +1,4 @@
+import pandas as pd
 class ezGroups():
     @staticmethod
     def dfGroup(dfSource,by=None,columnsList=None,groupbyColumns=None,floatFormatter='{:.2f}',aggDict=None,adjustNames=True):    
