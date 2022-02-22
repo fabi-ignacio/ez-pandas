@@ -1,1 +1,1 @@
-# ez-pandas-groupby
+# ez-pandas
