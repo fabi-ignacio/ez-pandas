@@ -1,1 +1,1 @@
-from ez__pd import *
+from ez_pd.ez__pd import *
