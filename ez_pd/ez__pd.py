@@ -1,7 +1,11 @@
 import pandas as pd
 
 @staticmethod
-def dfGroup(dfSource,by=None,columnsList=None,groupbyColumns=None,floatFormatter='{:.2f}',aggDict=None,adjustNames=True):    
+def dfGroup(dfSource,by=None,columnsList=None,groupbyColumns=None,floatFormatter='{:.2f}',aggDict=None,adjustNames=True):
+    if by != None:
+        pass
+    else:
+        by='mean'
     if by != 'agg':
         if columnsList!= None:
             dataFrame = dfSource[columnsList]
@@ -48,7 +52,7 @@ def dfGroup(dfSource,by=None,columnsList=None,groupbyColumns=None,floatFormatter
                     if t in groupbyColumns:
                         pass
                     else:
-                        dataFrame = dataFrame.rename({t:f'{t}_mean '},axis=1)
+                        dataFrame = dataFrame.rename({t:f'{t}_{by} '},axis=1)
             if floatFormatter != None:
                 for i in (dataFrame.columns):
                     if dataFrame[i].dtypes == 'float64':
